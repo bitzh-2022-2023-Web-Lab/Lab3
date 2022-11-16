@@ -1,0 +1,13 @@
+p {
+  text-indent: 2em;
+}
+
+table {
+  width: 60%;
+  margin: auto;
+  border: double 8px black;
+}
+
+td {
+  border: solid 1px black;
+}

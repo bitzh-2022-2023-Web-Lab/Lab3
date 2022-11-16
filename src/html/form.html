@@ -1,0 +1,125 @@
+<!--姓名：曾锦麟
+    班级：软工3班
+    实验名称：调查问卷
+    实验步骤：
+    1. 使用form表单将内容包围
+    2. 用表格布局
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/form.css">
+    <title>调查问卷</title>
+</head>
+
+<body>
+    <form action="" method="get">
+        <table>
+            <tr>
+                <td style="text-align: center;font-size: 24px;font-weight: bold;">
+                    《原神》游戏调查问卷
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>亲爱的玩家：</p>
+                    <p>大家好！</p>
+                    <p>《原神》开服至今已有两年多的时间了，在这两年中，我们致力于提供更好的游戏服务。为了提高游戏质量，更好的提高您的游戏体验，请您配合填写本问卷，</p>
+                    <p style="float: right;">MiHoYo</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    1. 您的性别：
+                    <input type="radio" name="Sex" value="male" />男
+                    <input type="radio" name="Sex" value="female" />女
+                    <input type="radio" name="Sex" value="null" checked="checked">保密
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    2. 您的年龄：
+                    <select name="old">
+                        <option value="null">请选择</option>
+                        <option value="8-">8岁及以下</option>
+                        <option value="6+">8~12岁</option>
+                        <option value="12+">12~16岁</option>
+                        <option value="16+">16~18岁</option>
+                        <option value="18+">18~24岁</option>
+                        <option value="24+">24岁以上</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    3. 您最开始在哪里了解到《原神》？
+                    <br>
+                    <input type="checkbox" name="known" value="website" />《原神》官网
+                    <br>
+                    <input type="checkbox" name="known" value="tiktok" />抖音
+                    <br>
+                    <input type="checkbox" name="known" value="Bilibili" />BiliBili
+                    <br>
+                    <input type="checkbox" name="known" value="friend">朋友推荐
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    4. 您一天游玩《原神》的时间有多长？
+                    <br>
+                    <input type="radio" name="game_time" value="2-" />0~2小时
+                    <br>
+                    <input type="radio" name="game_time" value="2+" />2~4小时
+                    <br>
+                    <input type="radio" name="game_time" value="4+" />4~6小时
+                    <br>
+                    <input type="radio" name="game_time" value="6+" />6小时以上
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    5. 您觉得《原神》吸引你的地方有？
+                    <br>
+                    <input type="checkbox" name="like" value="free" />自由的开放世界玩法
+                    <br>
+                    <input type="checkbox" name="like" value="donghua" />精美的动画
+                    <br>
+                    <input type="checkbox" name="like" value="battle" />丰富的战斗
+                    <br>
+                    <input type="checkbox" name="like" value="fanying" />不同的元素反应
+                    <br>
+                    <input type="checkbox" name="like" value="music" />优美的音乐
+                    <br>
+                    <input type="checkbox" name="like" value="other" />其他，请填写 <input type="text" name="like">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    6. 您会将《原神》推荐给其他人吗？
+                    <input type="radio" name="toOthers" value="yes">会
+                    <input type="radio" name="toOthers" value="no">不会
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    7. 您对《原神》还有什么建议吗？
+                    <br>
+                    <textarea rows="5" cols="80" placeholder="（选填）"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td style="display: flex; justify-content:space-around; ">
+                    <input type="submit" value="提交">
+                    <input type="reset" value="清空">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+
+</html>

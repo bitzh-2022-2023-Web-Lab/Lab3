@@ -1,0 +1,138 @@
+<!--姓名：曾锦麟
+    班级：软工3班
+    实验名称：实验3-2
+    实验步骤：
+    1. 模仿原学校官网的布局进行页面拆分
+    2. 用表格对学校官网布局进行重组
+    3. 使用dom将导航栏渲染到td上
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css//lab3-2.css">
+    <title>网页导航</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <table class="nav">
+                    <tr class="nav_items"></tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td><img class="pic_main" src="../../public/school_night.jpg" alt=""></td>
+        </tr>
+        <tr>
+            <td>
+                <table>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- 底部 -->
+        <tr>
+            <td>
+                <table class="bottom">
+                    <tr>
+                        <td colspan="2">
+                            <img class="logo" src="../../public/logo.svg" alt="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>地址:广东省珠海市唐家湾金凤路6号&nbsp;&nbsp;&nbsp;&nbsp;邮编：519088&nbsp;&nbsp;&nbsp;&nbsp;邮箱：zhbit@bitzh.edu.cn
+                        </td>
+                        <td>版权所有©北京理工大学珠海学院 粤ICP备05063448号</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+    </table>
+
+
+    <script>
+        // 导航栏元素
+        const navItems = [
+            {
+                value: "网站首页",
+                url: "./lab3-2.html"
+            },
+            {
+                value: "学校概况",
+                url: ""
+            },
+            {
+                value: "党群工作",
+                url: ""
+            },
+            {
+                value: "教学科研",
+                url: ""
+            },
+            {
+                value: "学生工作",
+                url: ""
+            },
+            {
+                value: "国际交流",
+                url: ""
+            },
+            {
+                value: "招生就业",
+                url: ""
+            },
+            {
+                value: "人才招聘",
+                url: ""
+            },
+            {
+                value: "新媒网",
+                url: "http://ucs.bitzh.edu.cn/"
+            },
+            {
+                value: "问卷调查",
+                url: "./form.html"
+            }
+        ]
+        doNavItems = () => {
+            let tr = document.querySelector('.nav_items')
+            console.log(tr)
+            for (let i = 0; i < navItems.length; i++) {
+                let td = document.createElement('td')
+                td.innerHTML = navItems[i].value
+                td.onclick = () => {
+                    const data = navItems[i]
+                    if (data.url === "") {
+                        functionIsNotDesigned()
+                    } else {
+                        document.location.href = data.url
+                    }
+                }
+                td.style = `width:${1 / navItems.length * 100}%`
+                tr.appendChild(td)
+            }
+        }
+
+        functionIsNotDesigned = () => {
+            alert("该功能未实现")
+        }
+
+        doNavItems()
+    </script>
+</body>
+
+</html>
