@@ -1,0 +1,28 @@
+table {
+  border: double 8px #0000ff;
+}
+
+td {
+  border: solid 1px black;
+  margin: auto;
+  text-align: center;
+}
+
+.father_table {
+  width: 300px;
+  margin: auto;
+}
+
+.child_table {
+  width: 80%;
+  margin: auto;
+  border-width: 1px;
+}
+
+.children1 {
+  background-color: #ffffee;
+}
+
+.children2 {
+    background-color: #fefefe;
+}
